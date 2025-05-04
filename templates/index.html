@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Indian Festivals{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block content %}
+<div class="landing-page">
+    <div class="landing-content text-center">
+        <h1 class="display-1">Major Indian Festivals</h1>
+        <p class="lead">Learn about the rich cultural heritage of India through its vibrant festivals</p>
+        <p>Discover the stories, traditions, and significance of major Indian celebrations</p>
+        
+        <div class="mt-5">
+            <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg" id="start-button">Start Learning</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

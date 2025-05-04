@@ -1,0 +1,170 @@
+{
+    "diwali": {
+      "id": "diwali",
+      "name": "Diwali",
+      "tagline": "Festival of Lights",
+      "image": "diwali.jpg",
+      "content": [
+        {
+          "title": "About Diwali",
+          "text": "Diwali, also known as Deepavali, is the Hindu festival of lights celebrated every year. It symbolizes the spiritual victory of light over darkness, good over evil, and knowledge over ignorance.",
+          "image": "diwali.jpg"
+        },
+        {
+          "title": "History and Significance",
+          "text": "Diwali commemorates Lord Rama's return to Ayodhya after defeating Ravana and completing his 14-year exile. People light diyas (oil lamps) to celebrate his return and to honor the goddess of wealth, Lakshmi."
+        },
+        {
+          "title": "Celebrations",
+          "text": "The celebration includes lighting diyas and candles, creating rangoli (colorful art patterns), bursting crackers, exchanging gifts and sweets, and performing prayers to Goddess Lakshmi and Lord Ganesha."
+        },
+        {
+          "title": "When is it celebrated?",
+          "text": "Diwali is celebrated on the darkest night (new moon) in the month of Kartik according to the Hindu calendar, which typically falls between mid-October and mid-November in the Gregorian calendar."
+        },
+        {
+          "title": "Duration",
+          "text": "Diwali is actually a five-day festival, with the main celebrations happening on the third day. Each day has its own significance and rituals."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Diwali is also known as?",
+          "options": ["Festival of Colors", "Festival of Lights", "Harvest Festival", "New Year"],
+          "answer": "Festival of Lights"
+        },
+        {
+          "question": "Diwali celebrates the return of which deity to Ayodhya?",
+          "options": ["Krishna", "Rama", "Shiva", "Ganesha"],
+          "answer": "Rama"
+        },
+        {
+          "question": "What do people traditionally light during Diwali?",
+          "options": ["Bonfires", "Candles only", "Diyas (oil lamps)", "Electric bulbs"],
+          "answer": "Diyas (oil lamps)"
+        },
+        {
+          "question": "How many days does the Diwali festival last?",
+          "options": ["1 day", "3 days", "5 days", "7 days"],
+          "answer": "5 days"
+        },
+        {
+          "question": "Which goddess is primarily worshipped during Diwali?",
+          "options": ["Saraswati", "Durga", "Kali", "Lakshmi"],
+          "answer": "Lakshmi"
+        }
+      ]
+    },
+    "holi": {
+      "id": "holi",
+      "name": "Holi",
+      "tagline": "Festival of Colors",
+      "image": "holi.jpg",
+      "content": [
+        {
+          "title": "About Holi",
+          "text": "Holi is a popular ancient Hindu festival, also known as the 'festival of colors', the 'festival of love', and the 'festival of spring'. It celebrates the eternal and divine love of Radha and Krishna.",
+          "image": "holi.jpg"
+        },
+        {
+          "title": "History and Significance",
+          "text": "Holi signifies the triumph of good over evil and the arrival of spring. It is associated with the legend of Holika and Prahlad, where Holika's attempt to burn Prahlad (a devotee of Lord Vishnu) failed, and she was burned instead."
+        },
+        {
+          "title": "Celebrations",
+          "text": "The festival begins with Holika Dahan, where people gather around a bonfire. The next day, known as Rangwali Holi, people play with colors, drenching each other in colored water and applying colored powder (gulal). Traditional sweets like gujiya are shared."
+        },
+        {
+          "title": "When is it celebrated?",
+          "text": "Holi is celebrated at the approach of the vernal equinox, on the Phalguna Purnima (Full Moon) according to the Hindu calendar, which usually falls in March in the Gregorian calendar."
+        },
+        {
+          "title": "Regional Variations",
+          "text": "Holi has different names and traditions across India. In West Bengal it's called 'Dol Jatra', in Assam it's 'Phakuwa', and in Bihar the festival is called 'Phaguwa'."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Holi is known as the festival of?",
+          "options": ["Lights", "Harvest", "Colors", "Dance"],
+          "answer": "Colors"
+        },
+        {
+          "question": "The day before the main Holi celebration is known as?",
+          "options": ["Rangwali Holi", "Holika Dahan", "Phalguna", "Dol Purnima"],
+          "answer": "Holika Dahan"
+        },
+        {
+          "question": "Which of these is NOT typically used during Holi celebrations?",
+          "options": ["Colored powders (gulal)", "Oil lamps", "Water guns (pichkaris)", "Water balloons"],
+          "answer": "Oil lamps"
+        },
+        {
+          "question": "Holi celebrates the arrival of which season?",
+          "options": ["Winter", "Summer", "Spring", "Autumn"],
+          "answer": "Spring"
+        },
+        {
+          "question": "The legend of Holi is associated with which mythological character who survived a fire?",
+          "options": ["Prahlad", "Krishna", "Radha", "Arjuna"],
+          "answer": "Prahlad"
+        }
+      ]
+    },
+    "harvest": {
+      "id": "harvest",
+      "name": "Harvest Festivals",
+      "tagline": "Celebrating the Harvest Season",
+      "image": "harvest.jpg",
+      "content": [
+        {
+          "title": "About Harvest Festivals",
+          "text": "India celebrates various harvest festivals across different states, marking the season when crops are harvested and farmers express gratitude for a good yield. These festivals honor the connection between nature, agriculture, and human life.",
+          "image": "harvest.jpg"
+        },
+        {
+          "title": "Regional Variations",
+          "text": "The harvest festival is known by different names across India: Uttarayan in Gujarat, Pongal in Tamil Nadu, Magh Bihu in Assam, and Lohri in Punjab. Each has unique customs but shares the common theme of thanksgiving."
+        },
+        {
+          "title": "Celebrations",
+          "text": "Common celebrations include preparing special foods from newly harvested crops, flying kites (especially in Gujarat), lighting bonfires (during Lohri), preparing sweet rice dishes (during Pongal), and folk dances that symbolize joy and prosperity."
+        },
+        {
+          "title": "When are they celebrated?",
+          "text": "Most Indian harvest festivals are celebrated in mid-January when the winter crop is harvested. The exact dates may vary according to the solar calendar and regional customs."
+        },
+        {
+          "title": "Cultural Significance",
+          "text": "These festivals mark the end of the winter solstice and honor the Sun God for providing energy for crops to grow. They also celebrate community bonds and the agricultural heritage of India."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "The harvest festival of Tamil Nadu is known as?",
+          "options": ["Bihu", "Lohri", "Pongal", "Onam"],
+          "answer": "Pongal"
+        },
+        {
+          "question": "Which activity is particularly associated with Uttarayan in Gujarat?",
+          "options": ["Boat racing", "Kite flying", "Elephant processions", "Masked dances"],
+          "answer": "Kite flying"
+        },
+        {
+          "question": "Most harvest festivals in India are celebrated in which month?",
+          "options": ["October", "January", "April", "August"],
+          "answer": "January"
+        },
+        {
+          "question": "The harvest festival of Punjab is called?",
+          "options": ["Lohri", "Baisakhi", "Pongal", "Onam"],
+          "answer": "Lohri"
+        },
+        {
+          "question": "Which deity is primarily honored during harvest festivals?",
+          "options": ["Moon God", "Rain God", "Sun God", "Wind God"],
+          "answer": "Sun God"
+        }
+      ]
+    }
+  }

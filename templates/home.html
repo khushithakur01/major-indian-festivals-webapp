@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Indian Festivals - Home{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="text-center mb-4">Explore Major Indian Festivals</h1>
+        <p class="text-center">Click on a festival card to learn more about it</p>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for festival_id, festival in festivals.items() %}
+    <div class="col">
+        <div class="card h-100 festival-card" onclick="location.href='{{ url_for('learn', festival_id=festival_id) }}'">
+            <img src="{{ url_for('static', filename='images/' + festival.image) }}" class="card-img-top" alt="{{ festival.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ festival.name }}</h5>
+                <p class="card-text">{{ festival.tagline }}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Click to learn more</small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

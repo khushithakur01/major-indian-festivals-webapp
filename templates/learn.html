@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Learn about {{ festival.name }}{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">{{ festival.name }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Results</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="learning-container">
+    <h1 class="mb-4">{{ festival.name }} - {{ festival.tagline }}</h1>
+    
+    <!-- Progress bar -->
+    <div class="progress mb-4" style="height: 30px;">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="learning-progress" 
+             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+    
+    <!-- Learning content -->
+    <div id="learning-carousel" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner">
+            {% for item in festival.content %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}" data-section="{{ loop.index }}">
+                <div class="learning-card card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ item.title }}</h2>
+                        <p class="card-text">{{ item.text }}</p>
+                        {% if item.image %}
+                        <img src="{{ url_for('static', filename='images/' + item.image) }}" 
+                             class="img-fluid rounded mb-3" alt="{{ item.title }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- Final slide with quiz button -->
+            <div class="carousel-item" data-section="{{ festival.content|length + 1 }}">
+                <div class="learning-card card text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Congratulations!</h2>
+                        <p class="card-text">You've learned all about {{ festival.name }}. Ready to test your knowledge?</p>
+                        <a href="{{ url_for('quiz', festival_id=festival_id) }}" class="btn btn-primary btn-lg mt-3">Start Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+        <button class="btn btn-primary" id="next-btn">Next</button>
+    </div>
+</div>
+
+<script>
+    // Learning page specific script
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.getElementById('learning-carousel');
+        const progressBar = document.getElementById('learning-progress');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: false,
+            wrap: false
+        });
+        
+        const totalSlides = {{ festival.content|length + 1 }};
+        let currentSlide = 1;
+        
+        updateProgress(currentSlide);
+        
+        nextBtn.addEventListener('click', function() {
+            carouselInstance.next();
+            currentSlide++;
+            updateButtons();
+            updateProgress(currentSlide);
+        });
+        
+        prevBtn.addEventListener('click', function() {
+            carouselInstance.prev();
+            currentSlide--;
+            updateButtons();
+            updateProgress(currentSlide);
+        });
+        
+        function updateButtons() {
+            prevBtn.disabled = currentSlide === 1;
+            if (currentSlide === totalSlides) {
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.disabled = false;
+            }
+        }
+        
+        function updateProgress(current) {
+            const percentage = Math.floor((current - 1) / (totalSlides - 1) * 100);
+            progressBar.style.width = percentage + '%';
+            progressBar.innerText = percentage + '%';
+            progressBar.setAttribute('aria-valuenow', percentage);
+        }
+    });
+</script>
+{% endblock %}
